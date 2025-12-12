@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mental Health Support - Blogs</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #e2e8f0;
+        }
+
+        header {
+            text-align: center;
+            padding: 35px 20px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #6ee7b7;
+        }
+
+        nav {
+            text-align: center;
+            padding: 12px 0;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(4px);
+        }
+
+        nav a {
+            margin: 0 18px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #6ee7b7; }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            border-radius: 14px;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 0 12px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            border-left: 4px solid #60a5fa;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #6ee7b7;
+        }
+
+        /* Blog Form */
+        .blog-form {
+            max-width: 700px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.3);
+        }
+
+        .blog-form input, .blog-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .blog-form button {
+            padding: 12px 18px;
+            background: #6ee7b7;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .blog-form button:hover {
+            background: #4ade80;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mental Health Blogs & Tips</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="chat.html">Anonymous Chat</a>
+    <a href="help.html">Professional Help</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<!-- BLOG WRITING FORM -->
+<section class="blog-form">
+    <h2 style="color:#6ee7b7;">Write a Blog</h2>
+    <input id="blogTitle" type="text" placeholder="Enter blog title" required>
+    <textarea id="blogContent" rows="5" placeholder="Write your blog here..." required></textarea>
+    <button onclick="addBlog()">Publish Blog</button>
+</section>
+
+<!-- EXISTING BLOGS -->
+<section class="container" id="blogContainer">
+
+    <div class="card">
+        <h3>Self-care Tips for a Healthy Mind</h3>
+        <ul>
+            <li>Practice deep breathing</li>
+            <li>Write a gratitude journal</li>
+            <li>Avoid overthinking</li>
+            <li>Take small mental breaks</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Blog: Dealing With Stress</h3>
+        <p>Stress is a part of life, but learning to manage it can improve your well-being...</p>
+    </div>
+
+    <div class="card">
+        <h3>Blog: Importance of Talking to Someone</h3>
+        <p>Sharing your feelings with someone can lighten the emotional load...</p>
+    </div>
+
+</section>
+
+<script>
+    function addBlog() {
+        let title = document.getElementById("blogTitle").value;
+        let content = document.getElementById("blogContent").value;
+
+        if (title.trim() === "" || content.trim() === "") {
+            alert("Please fill out both fields.");
+            return;
+        }
+
+        let blogContainer = document.getElementById("blogContainer");
+
+        // Create new blog card
+        let newCard = document.createElement("div");
+        newCard.className = "card";
+
+        newCard.innerHTML = `
+            <h3>${title}</h3>
+            <p>${content}</p>
+        `;
+
+        // Add blog to the top
+        blogContainer.prepend(newCard);
+
+        // Clear form
+        document.getElementById("blogTitle").value = "";
+        document.getElementById("blogContent").value = "";
+    }
+</script>
+
+</body>
+</html>

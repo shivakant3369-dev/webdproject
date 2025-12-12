@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Help</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #e2e8f0;
+        }
+
+        header {
+            text-align: center;
+            padding: 35px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #6ee7b7;
+        }
+
+        nav {
+            text-align: center;
+            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px);
+        }
+
+        nav a {
+            margin: 0 18px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #6ee7b7;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 420px;
+            padding: 25px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 0 12px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            border-left: 4px solid #60a5fa;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+        }
+
+        .card h2 {
+            color: #6ee7b7;
+            margin-top: 0;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            margin: 8px 0;
+        }
+
+        .card a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            color: #6ee7b7;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Professional Support</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="blogs.html">Blogs</a>
+    <a href="chat.html">Anonymous Chat</a>
+    <a href="help.html">Professional Help</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<section class="container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <h2>Counseling Services</h2>
+        <p>Connect with certified mental-health support:</p>
+        <ul>
+            <li><a href="https://www.fortismindline.com" target="_blank">Fortis Stress Helpline (Fortis Hospitals)</a></li>
+            <li><a href="https://www.thelivelovelaughfoundation.org/find-help/helplines" target="_blank">Live Love Laugh - Helpline Directory</a></li>
+            <li><a href="https://www.sangath.in" target="_blank">Sangath Mental Health NGO</a></li>
+            <li><a href="https://www.manas.gov.in" target="_blank">MANAS (Govt. of India Mental Health Platform)</a></li>
+        </ul>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <h2>Emergency Contacts (India)</h2>
+        <ul>
+            <li><strong>Suicide Prevention Helpline (Aasra):</strong> <a href="tel:9820466726">+91 9820466726</a></li>
+            <li><strong>National Mental Health Helpline:</strong> <a href="tel:18008914416">1800-891-4416</a></li>
+            <li><strong>Emergency Ambulance:</strong> <a href="tel:108">108</a></li>
+            <li><strong>Mental Health Directory:</strong> <a href="https://findahelp.in" target="_blank">FindAHelp.in</a></li>
+        </ul>
+    </div>
+
+</section>
+
+</body>
+</html>
