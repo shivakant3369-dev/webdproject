@@ -1,2 +1,2 @@
 # webdproject
-weed project
+webd project
